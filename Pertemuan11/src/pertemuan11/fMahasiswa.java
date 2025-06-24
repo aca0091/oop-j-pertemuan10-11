@@ -328,7 +328,25 @@ public class fMahasiswa extends javax.swing.JFrame {
     }//GEN-LAST:event_cUBAHActionPerformed
 
     private void cTUTUPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cTUTUPActionPerformed
-        System.exit(0);
+        if(cTUTUP.getText().equals("Tutup")){
+        
+            int jwb = JOptionPane.showOptionDialog(this,
+                        "Yakin akan menutup aplikasi",
+                        "Konfirmasi Hapus Data",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.ERROR_MESSAGE,
+                        null, null, null);
+            if(jwb == JOptionPane.YES_OPTION){
+
+            System.exit(0);
+            }
+        }else{
+            cTUTUP.setText("Tutup");
+            cBARU.setText("Baru");
+            cUBAH.setText("Ubah");
+            fieldIsian(false);
+            
+        }
     }//GEN-LAST:event_cTUTUPActionPerformed
 
     private void cHAPUSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cHAPUSActionPerformed
